@@ -1,0 +1,219 @@
+/* Updated CSS for a cleaner, modern UI with navbar, pie chart section, and light/dark mode support */
+
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+  --primary-color: #2980b9;
+  --primary-dark: #4a148c;
+  --income-color: #27ae60;
+  --expense-color: #c0392b;
+  --card-bg: #fff;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-bg: #1e1e1e;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+} */
+
+.navbar {
+  width: 100%;
+ /* max-width: 1000px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--primary-color);
+  color: white;
+  /* border-radius: 10px; */
+  /* margin-bottom: 30px; */
+}
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+.navbar button {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.navbar button:hover {
+  background-color: #eee;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--card-bg);
+  padding: 32px;
+  border-radius: 15px;
+  width: 100%;
+  /*max-width: 500px;*/
+  box-shadow: 0 12px 30px var(--shadow);
+  margin-bottom: 30px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container label {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.container input {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container input::placeholder {
+  font-style: italic;
+  font-size: 13px;
+}
+
+.container button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  background-color: var(--primary-dark);
+}
+
+.amounts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ /* max-width: 500px;*/
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.income-amount {
+  color: var(--income-color);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.expense-amount {
+  color: var(--expense-color);
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.expense-list {
+  width: 100%;
+ /* max-width: 500px;*/
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+  padding: 20px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.expense-description {
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.expense-amount {
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 80px;
+  text-align: right;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.pie-chart-section {
+  margin: 20px auto;
+  /* max-width: 500px; */
+  width: 100%;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+  text-align: center;
+}
