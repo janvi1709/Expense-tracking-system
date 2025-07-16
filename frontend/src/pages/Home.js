@@ -153,7 +153,8 @@ function Home() {
       <header className="landing-hero">
         <h1>Welcome to FinTrack</h1>
         <p>Track your expenses, visualize your spending, and manage your budget like a pro.</p>
-        <Link to="/login" className="cta-button">Get Started</Link>
+        {/* <Link to="/login" className="cta-button">Get Started</Link> */}
+        
       </header>
 
       {/* Feature Highlights */}
